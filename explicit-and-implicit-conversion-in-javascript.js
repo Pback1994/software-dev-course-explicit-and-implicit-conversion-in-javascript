@@ -18,15 +18,28 @@ Use console.log() to clearly show the before-and-after type conversions.
 
 */
 
+// Part 1: Solution
 
-let result = "5" - 2;
+let result = Number("5") - 2; // code updates now convert the string ("5") to an integer before performing the subtraction.
 console.log("The result is: " + result);
 
 let isValid = Boolean("false");
-if (isValid) {
-    console.log("This is valid!");
+if (isValid === "true") {
+  // updates now explicitly check to see if the string ("false") is a boolean value as part of the if statements.
+  console.log("This is valid!");
+} else {
+  console.log("This is NOT valid!");
 }
 
-let age = "25";
+let age = Number("25"); // code updates now convert the string ("25") to an integer before performing the addition operation.
 let totalAge = age + 5;
 console.log("Total Age: " + totalAge);
+
+// Part 2: Solution
+
+let strNumber = "10";
+let convertNumber = Number("10");
+console.log(convertNumber);
+
+let invalidNumber = undefined + 10;
+console.log(invalidNumber);
